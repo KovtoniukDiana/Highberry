@@ -1,0 +1,371 @@
+@font-face {
+  font-family: Roboro-light;
+  src: url(../fonts/Roboto-Light.ttf);
+}
+@font-face {
+  font-family: Roboro-Regular;
+  src: url(../fonts/Roboto-Regular.ttf);
+}
+@font-face {
+  font-family: Roboro-Medium;
+  src: url(../fonts/Roboto-Medium.ttf);
+}
+@font-face {
+  font-family: Mako-Regular;
+  src: url(../fonts/Mako-Regular.ttf);
+}
+@font-face {
+  font-family: Mulish-Regular;
+  src: url(../fonts/Mulish-Regular.ttf);
+}
+@font-face {
+  font-family: Mulish-Semibold;
+  src: url(../fonts//Mulish-SemiBold.ttf);
+}
+@font-face {
+  font-family: Mulish-Bold;
+  src: url(../fonts/Mulish-Bold.ttf);
+}
+body {
+  font-family: Roboro-light;
+  font-size: 40px;
+  margin: 0;
+}
+
+body .catalog-pdf {
+  display: flex;
+  align-items: center;
+  width: 193px;
+  gap: 9px;
+}
+body .catalog-pdf .link {
+  text-decoration: none;
+  color: #FFFFFF;
+  font-size: 16px;
+  font-family: Mako-Regular;
+  margin: 0;
+}
+body .catalog-pdf .pdf-image {
+  width: 18.74px;
+  height: 16.06px;
+}
+body .icons {
+  display: flex;
+  gap: 26px;
+  font-size: 21px;
+}
+
+.facts {
+  margin-left: 8%;
+}
+.facts .inline-group {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+.facts .inline-group .bold-text {
+  font-weight: 900;
+  text-shadow: 0.7px 0.7px 0 black;
+}
+.facts p {
+  font-weight: bold;
+  font-size: 17px;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.icon-container {
+  width: 980px;
+  height: fit-content;
+  display: flex;
+  justify-content: space-between;
+}
+.icon-container .icons-info {
+  display: flex;
+  width: 29.74%;
+  height: 120.56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #E3DED9;
+  border-radius: 10px;
+}
+.icon-container .icons-info .green-circle {
+  min-width: 54.5px;
+  height: 54.5px;
+  background-color: #6AB354;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icon-container .icons-info .facts {
+  font-size: 15px;
+}
+
+.flex-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.green-link {
+  font-family: Mulish-Semibold;
+  font-size: 14px;
+  color: #74B746;
+  text-decoration: none;
+  word-spacing: 0px;
+}
+
+.scroll-down {
+  background-color: #FFFFFF !important;
+  color: #6AB354;
+  z-index: 7;
+  opacity: 1;
+  transition: background-color 0.5s ease-out, color 0.5s ease-out;
+}
+.scroll-down .green-fiter {
+  filter: brightness(0) saturate(100%) invert(64%) sepia(14%) saturate(1413%) hue-rotate(61deg) brightness(94%) contrast(92%);
+}
+
+body .grey-background {
+  background-color: #F5F5F5;
+}
+
+header nav {
+  background-color: #FFFFFF;
+  color: #6AB354;
+  position: fixed;
+  z-index: 1;
+}
+header nav .green-fiter {
+  filter: brightness(0) saturate(100%) invert(64%) sepia(14%) saturate(1413%) hue-rotate(61deg) brightness(94%) contrast(92%);
+}
+
+.info-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.grey-shadow-box {
+  border-radius: 10px;
+  box-shadow: 0 10px 5px rgba(0, 0, 0, 0.1);
+  border: 1px solid #E3DED9 !important;
+  background-color: #FFFFFF;
+}
+
+body .growing {
+  height: 1124px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: column;
+}
+body .growing .title {
+  font-family: Roboro-Regular;
+  font-size: 48px;
+  color: #6AB354;
+}
+body .growing .product-map-selection {
+  width: 970px;
+  height: 518px;
+  margin-top: 56px;
+  background-image: url(/img/main-page-growing/background.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+body .growing .product-map-selection .grid-vegetables-container {
+  height: fit-content;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  font-family: Roboro-Regular;
+  font-size: 16px;
+  border: 2px solid #E3DED9;
+  border-radius: 10px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+  row-gap: 30px;
+}
+body .growing .product-map-selection .grid-vegetables-container .grid-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+body .growing .product-map-selection .grid-vegetables-container .grid-item .divider-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 205px;
+  height: 60px;
+  background-color: white;
+  gap: 5px;
+}
+body .growing .product-map-selection .grid-vegetables-container .grid-item .divider-text .divider {
+  font-size: 1.75em;
+  color: #20912A;
+}
+body .growing .product-map-selection .grid-vegetables-container .grid-item .divider-text p {
+  margin: 0;
+}
+body .growing .product-map-selection .grid-vegetables-container .grid-item.right {
+  justify-content: right;
+}
+body .growing .product-map-selection .grid-vegetables-container .grid-item .hidden {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+body .growing .product-map-selection .grid-vegetables-container .grid-item .visible {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+body .growing .product-map-selection .grid-vegetables-container .grid-item .active-filter {
+  filter: brightness(0) saturate(100%) invert(32%) sepia(95%) saturate(4909%) hue-rotate(74deg) brightness(96%) contrast(87%);
+}
+
+.two-column-info {
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 4%;
+  margin-top: 76px;
+  margin-bottom: 150px;
+}
+.two-column-info p {
+  font-size: 16px;
+  word-spacing: 4.5px;
+  margin: 0;
+  width: 49%;
+}
+
+header {
+  height: 1080px;
+}
+header .info-block {
+  width: 64.6%;
+  height: 574px;
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+header .info-block .title {
+  font-family: Roboro-light;
+  font-size: 51.4px;
+  color: #6AB354;
+}
+header .info-block .icons-info {
+  width: fit-content !important;
+}
+header .info-block .icons-info .facts {
+  margin-left: 5px;
+}
+header .info-block .regular-text {
+  text-align: left;
+}
+
+body .frozing {
+  padding-top: 98.51px;
+}
+body .frozing .frozing-block {
+  width: 72.2%;
+}
+body .frozing .frozing-block .grey-shadow-box {
+  display: flex;
+  gap: 108px;
+  margin-bottom: 62px;
+}
+body .frozing .frozing-block .grey-shadow-box div:nth-child(1) {
+  margin-left: 31px;
+}
+body .frozing .frozing-block .grey-shadow-box .text-block {
+  flex-direction: column;
+  text-align: left;
+  width: 61.4%;
+}
+body .frozing .frozing-block .grey-shadow-box .text-block .title {
+  font-family: Roboro-light;
+  font-size: 30px;
+  color: #6AB354;
+}
+body .frozing .frozing-block .grey-shadow-box .text-block .gorizontal-line {
+  background-color: #6AB354;
+  width: 236px;
+  min-height: 1px;
+}
+body .frozing .frozing-block .grey-shadow-box .text-block .information {
+  font-size: 18px;
+  font-family: Roboro-Regular;
+}
+body .frozing .frozing-block .grey-shadow-box .image-block {
+  flex-direction: column;
+  margin-right: 31px;
+}
+body .frozing .frozing-block .grey-shadow-box .image-block p {
+  color: #8CB9DF;
+  font-family: Roboro-Medium;
+}
+body .frozing .frozing-block .grey-shadow-box .image-block .blue-item {
+  width: 140px;
+  height: 15px;
+  background-color: #8CB9DF;
+  border-radius: 15px;
+  margin-top: 15px;
+}
+
+body .frozing-processes {
+  flex-direction: column;
+}
+body .frozing-processes .title {
+  font-family: Roboro-Medium;
+  font-size: 51.4px;
+  color: #6AB354;
+}
+body .frozing-processes .fabric-grid {
+  display: grid;
+  width: 91.3%;
+  grid-template-columns: 44.6% 27px 44.6%;
+  grid-template-rows: repeat(10, auto);
+  column-gap: 54.5px;
+  row-gap: 124px;
+}
+body .frozing-processes .fabric-grid .text-item {
+  width: 100%;
+}
+body .frozing-processes .fabric-grid .text-item:nth-child(1) {
+  margin-top: 45px;
+}
+body .frozing-processes .fabric-grid .green-divider {
+  flex-direction: column;
+  border-left: 5px solid #6AB354;
+  border-right: 5px solid #6AB354;
+  grid-row-start: 1;
+  grid-row-end: 11;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  overflow: hidden;
+}
+body .frozing-processes .fabric-grid .green-divider img {
+  width: 13px;
+}
+body .frozing-processes .fabric-grid .photo-container {
+  width: 100%;
+  height: 487px;
+}
+body .frozing-processes .fabric-grid .photo-container img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+body .frozing-processes .fabric-grid .photo-container:nth-child(3) {
+  margin-top: 45px;
+}
+
+body .map-section {
+  height: 870px;
+}
+/*# sourceMappingURL=production.css.map */

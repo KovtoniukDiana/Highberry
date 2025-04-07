@@ -1,0 +1,349 @@
+
+@import "default";
+
+
+    .round-border-container {
+        border: 2px solid $BorderGreyColor;
+        border-radius: 10px;
+    }
+    
+    .image-section {
+        width: 700px;
+        position: relative;
+
+        img {
+            @include PhotoSliderContainer (0px);
+
+        }
+    }
+
+    .slider-text-content {
+        display: flex;
+        flex-direction: column;
+        row-gap: 11px;
+
+
+        .title{
+            margin-bottom: 0;
+        }
+
+        .accordion {
+            display: flex;
+            gap: 40px;
+
+            .accordion-icon {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 0px;
+                width: 20px;
+                overflow: hidden;
+
+                .ellipse {
+                    width: 75%;
+                    height: 15px;
+                    border-radius: 50%;
+                    border: 2px solid $AccordeonColor;
+                    transition: background-color 0.5s ease-in-out; 
+                }
+
+                .line{
+                    position: absolute;
+                    margin-top: 17px;
+                    width: 2px;
+                    height: 100%;
+                    background-color: $AccordeonColor;
+                    overflow: hidden;
+                    max-height: 0;
+                    opacity: 0;
+                    transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+                }   
+            } 
+
+            .accordion-text {
+                display: flex;
+                flex-direction: column;
+                gap: 11px;
+
+                .title-text {
+                    font-size: 28px;
+                    margin: 0;
+                    cursor: pointer;
+                }
+    
+                .accordion-content {
+                    overflow: hidden;
+                    max-height: 0;
+                    opacity: 0;
+                    transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+
+                    p{
+                        margin: 0;
+                        font-size: 16px;
+                    }
+
+
+                }
+            }
+            
+            &.active .ellipse .accordion-content{
+                .ellipse {
+                    background-color: $AccordeonColor;
+                }
+
+                .line {
+                    max-height: 200px;
+                    opacity: 1;
+                }
+
+                .accordion-content {
+                    opacity: 1;
+                }
+            }
+
+        }
+        
+
+        .title {
+            @include Title(Roboro-Regular, 46px)
+        }
+
+    }
+
+
+header {
+    background-image: url(../img/main-green-background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 910px;
+    color: $WhiteColor;
+
+    .col-xxl-container {
+        width: 77%;
+        height: fit-content;
+        
+
+        .img-slogan {
+            display: flex;
+            flex-direction: column;
+            row-gap: 103px;
+            margin-top: 145px;
+
+            .company-logo-second {
+                height: 242.62px;
+                width: 259.27px;
+            }
+
+            .slogan {
+                font-size: 60px;
+                width: 416px;
+
+                p {
+                    margin: 0;
+                }
+
+            }
+
+        }
+        
+    }
+
+    .showreel{
+        align-self: flex-end;
+        margin-top: 98px;
+        margin-right: 40px;
+        display: flex;
+
+        button {
+            background-color: transparent;
+            border: none;
+            padding: 0;
+            cursor: pointer;
+        }
+
+    }
+
+}
+
+body .we-near {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .title {
+        @include  Title(Roboro-Regular, 48px);
+    }
+
+    .map-img {
+        width: 68%;
+        margin-top: 69px;
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+body .fresh-production-section {
+    @include MainPageSliderContainer(89px, 820px);
+
+    .image-section {
+        width: 48.9%;
+        height: 100%;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .production-section {
+        margin-top: 61px;
+        padding-right: 20px;
+
+        .accordion-text {
+            width: 418px;
+        }
+    }
+}
+
+body .frozen {
+    @include MainPageSliderContainer(99px, 619px); 
+
+    .slider-img-container{
+        width: 48%;
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        .slider-img-item {
+            width: 82%;
+            position: absolute;
+            transition: z-index 0.3s ease, transform 0.4s ease, scale 0.4s ease;
+            will-change: transform, scale,  z-index;
+            
+            img {
+                height: 100%;
+                width: 100%; 
+            }
+
+            &.selected {
+                height: 100%;
+                z-index: 5;
+                transform: translateX(0) scale(1);
+            }
+            &.second {
+                z-index: 4;
+                height: 93.3%;
+                transform: translateX(10%) scale(0.95);
+            }
+            &.third {
+                z-index: 3;
+                height: 86.6%;
+                transform: translateX(20%) scale(0.9);
+            }
+            &.fourth {
+                z-index: 2;
+                height: 79.9%;
+                transform: translateX(30%) scale(0.85);
+            }
+            &.fifth {
+                z-index: 1;
+                height: 73.2%;
+                transform: translateX(40%) scale(0.8);
+            }   
+
+            
+        }
+    }
+
+    .slider-text-content .title{
+        margin-top: 30%;
+        margin-bottom: 15px;
+    }
+}
+
+body .production {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 809px;
+
+    .title {
+        @include Title( Roboro-Regular, 48px);
+    }
+
+    .production-content{
+        width: 67.9%;
+        height: 30.4%;
+        display: flex;
+        gap: 65px;
+        align-items: center;
+        justify-content: center;
+
+        .img-container {
+            display: flex;
+            align-items: center;
+            width: 204px;
+            height: 145px;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .two-column-info{
+            width: 61.3%;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+
+            p{
+                width: 100%;
+                line-height: 1.5;
+            }
+        }
+    }
+
+    .icon-container{
+        margin-top: 63px;
+        margin-bottom: 63px;
+    }
+}
+
+
+
+
+body .youtube-video-section {
+    height: 674px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .video {
+        width: 62%;
+        height: 73%;
+
+        iframe {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,80 @@
+@import "default";
+
+header {
+    height: 816px;
+
+    nav {
+        @extend %NotFirstHeader;
+       }
+
+    .info-block {
+        @include InfoBlock (60.3%, fit-content, 53%);
+
+        .title {
+            @include Title(Roboro-light, 51.4px);
+        }     
+        
+        .gorizontal-line {
+            @include GorizontalLineGreen (65.6%);
+        }
+
+        .information {
+            font-family: Roboro-Regular;
+        }
+    }
+}
+
+.logo-info {
+    gap: 100px;
+    padding: 75px;
+
+    .title {
+        @include Title(Roboro-Regular, 46px);
+    }
+
+    .gorizontal-line {
+        @include GorizontalLineGreen (220px);
+    }
+}
+
+.grey-background.flex-wrapper {
+    padding-top: 71px;
+    padding-bottom: 110px;
+
+    .icon-block {
+        width: 81.6%;
+
+        .item {
+            .title {
+                font-family: Roboro-Regular;
+                font-size: 28px;
+                p {
+                    margin-top: 65px;
+                    margin-bottom: 0;
+                }
+            }
+            .information {
+                font-family: Roboro-light;
+                font-size: 20px;
+                line-height: 1.6;
+                width: 85%;
+            }
+        }
+    
+        .first-row {
+            display: flex;
+            justify-content: space-between;
+
+            .item {
+                @include GreenBorderBox (30.6%, 416px);
+            }
+        }
+    
+        .second-row {
+            @include GreenBorderBox (100%, 416px);
+            margin-top: 86px;
+        }
+    }
+}
+
+

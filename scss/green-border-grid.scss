@@ -1,0 +1,33 @@
+@import "default";
+
+
+.green-border-item {
+    .text-item {
+        @include GreenBorderBox (auto, 487px);
+
+        .title {
+            @include Title(Roboro-light, 30px);
+            p {
+                margin-top: 67px;
+            }
+        }        
+
+        .gorizontal-line {
+            @include GorizontalLineGreen (268px);
+        }
+
+        .information {
+            font-size: 18px;
+            font-family: Roboro-Regular;
+            width: 87%;
+            text-align: left;
+            line-height: 1.65;
+            overflow: hidden;
+
+            p {
+
+                margin-top: 27px;
+            }
+        }
+    }
+}

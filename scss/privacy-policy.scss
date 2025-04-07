@@ -1,0 +1,9 @@
+@import "default";
+
+.header-background {
+    @include HeaderWhiteGorizontalLine(447px, "/img/growing/growing-header.png");
+}
+
+.block {
+    height: 400px;
+}

@@ -1,0 +1,102 @@
+@import "default";
+
+.opened-menu {
+    width: 100%;
+    height: 100%;
+    z-index: 15;
+    position: fixed;
+    background: rgba(0, 0, 0, 0); 
+    visibility: hidden;
+    transition: background 0.5s ease;
+    display: flex;
+    justify-content: flex-end;
+
+    &.open {
+        background: rgba(0, 0, 0, 0.5);
+        visibility: visible;
+    }
+
+    .menu {
+        height: 100%;
+        width: 406px;
+        padding: 32px 52px;
+        box-sizing: border-box;
+        background-color: $WhiteColor;
+        color: $lightGreenColor;
+        right: -406px;
+        transition: right 0.5s ease;
+        position: absolute;
+        &.open {
+            right: 0;
+        }
+    
+        .controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+    
+            img {
+                height: 16px;
+                width: 16px;
+            }
+    
+            .close-menu {
+                margin-left: 28px;
+            }
+        }
+    
+        a{
+            text-decoration: none;
+            color: $lightGreenColor;
+         }
+    
+        .ul-item {
+            list-style: none;
+            padding: 0;
+    
+            .li-item {
+                transform: translateX(400px);
+                transition: transform 0.7s ease-out;
+                &.open {
+                    transform: translateX(0);
+                }
+
+                .submenu {
+                    display: none;
+                    list-style: none;
+                    font-size: 28px;
+                    font-family: Roboro-Regular;
+                    padding-left: 20px;
+                    li{
+                        margin: 20px 0px;
+                    }
+                }
+            }
+        }
+    
+        .gorizontal-line {
+            @include GorizontalLineGreen (100%);
+            margin: 0 auto;
+        }
+    
+        .contacts { 
+            font-size: 16px;
+            font-family: Roboro-Regular;
+            display: flex;
+            justify-content: space-between;
+            margin: 0 auto;
+            margin-top: 36px;
+    
+            .region {
+                text-align: right;
+            }
+    
+            p {
+                margin: 0;
+            }
+        }
+    }
+}
+
+
+

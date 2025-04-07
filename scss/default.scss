@@ -1,0 +1,405 @@
+@font-face {
+    font-family: Roboro-light;
+    src: url(../fonts/Roboto-Light.ttf);
+}
+
+@font-face {
+    font-family: Roboro-Regular;
+    src: url(../fonts/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: Roboro-Medium;
+    src: url(../fonts/Roboto-Medium.ttf);
+}
+
+@font-face {
+    font-family: Mako-Regular;
+    src: url(../fonts/Mako-Regular.ttf);
+}
+
+@font-face {
+    font-family: Mulish-Regular;
+    src: url(../fonts/Mulish-Regular.ttf);
+}
+
+@font-face {
+    font-family: Mulish-Semibold;
+    src: url(../fonts//Mulish-SemiBold.ttf);
+}
+
+
+@font-face {
+    font-family: Mulish-Bold;
+    src: url(../fonts/Mulish-Bold.ttf);
+}
+
+
+$primaryColor: #000000;
+$secondColor:  #666769;
+$lightGreenColor: #6AB354;
+$DarkGreenColor: #20912A;
+$AccordeonColor: #74B746;
+$LinkColor: #74B746;
+$AlmostWhiteColor: #F5F5F5;
+$WhiteColor: #FFFFFF;
+$BorderGreyColor: #E3DED9;
+$BackgroundColor: #ECEDEC;
+$BlueColor: #8CB9DF;
+
+
+body{
+    font-family: Roboro-light;
+    font-size: 40px;
+    margin: 0;
+}
+
+
+@mixin Green-circle-template($w, $h) {
+    min-width: $w;
+    height: $h;
+    background-color: $lightGreenColor;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin Title($f-m, $f-z) {
+    font-family: $f-m;
+    font-size: $f-z;
+    color: $lightGreenColor;
+}
+
+
+@mixin GreenIconContainer($w, $h) {
+    width: $w;
+    height: $h;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid $BorderGreyColor;
+    border-radius: 10px;
+}
+
+@mixin MainPageSliderContainer($gap, $h) {
+    gap: $gap;
+    height: $h;
+    background-color: $BackgroundColor;
+    display: flex;
+    flex-direction: row;
+
+}
+
+body {
+    .catalog-pdf {
+        display: flex;
+        align-items: center;
+        width: 193px;
+        gap: 9px;
+
+        .link {
+            text-decoration: none;
+            color: $WhiteColor;
+            font-size: 16px;
+            font-family: Mako-Regular;
+            margin: 0;
+        }
+
+        .pdf-image {
+            width: 18.74px;
+            height: 16.06px;
+        }
+    }
+
+    .icons {
+        display: flex;
+        gap: 26px;
+        font-size: 21px;
+    }
+}    
+
+.facts {
+    margin-left: 8%;
+
+    .inline-group {
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+
+        .bold-text {
+            font-weight: 900;
+            text-shadow: 0.7px 0.7px 0 black;
+        }
+    }
+
+    p {
+        font-weight: bold;
+        font-size: 17px;
+        margin: 0;
+        line-height: 1.3;
+    }
+}
+
+.icon-container {
+    width: 980px;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    
+    .icons-info {
+        display: flex;
+        @include GreenIconContainer(29.74%, 120.56px);
+
+        .green-circle {
+            @include Green-circle-template(54.5px, 54.5px);
+        }
+
+        .facts {
+            font-size: 15px;
+        }
+    }
+}
+
+.flex-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.green-link {
+    font-family: Mulish-Semibold;
+    font-size: 14px;
+    color: $LinkColor;
+    text-decoration: none;
+    word-spacing: 0px;
+}
+
+.scroll-down {
+    background-color: $WhiteColor !important;
+    color: $lightGreenColor;
+    z-index: 7;
+    opacity: 1;
+    transition: background-color 0.5s ease-out, color 0.5s ease-out;
+
+    .green-fiter {
+        filter: brightness(0) saturate(100%) invert(64%) sepia(14%) saturate(1413%) hue-rotate(61deg) brightness(94%) contrast(92%);
+    }
+}
+
+body .grey-background {
+    background-color: $AlmostWhiteColor;
+}    
+
+%NotFirstHeader {
+    background-color: $WhiteColor;
+    color: $lightGreenColor;
+    position: fixed;
+    z-index: 1;
+
+    .green-fiter {
+        filter: brightness(0) saturate(100%) invert(64%) sepia(14%) saturate(1413%) hue-rotate(61deg) brightness(94%) contrast(92%);
+    }
+}
+
+.info-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+@mixin InfoBlock ($w, $h, $top) {
+    width: $w;
+    height: $h;
+    position: absolute;
+    top: $top;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+}
+
+@mixin GreenBorderBox ($w, $h) {
+    border-radius: 10px;
+    border: 1px solid $lightGreenColor;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    width: $w;
+    height: $h;
+
+    .green-circle {
+        @include Green-circle-template (70px, 70px);    
+        position: absolute; 
+        top: -8%;
+    }
+}
+
+.grey-shadow-box {
+    border-radius: 10px;
+    box-shadow: 0 10px 5px rgba(0, 0, 0, 0.1);
+    border: 1px solid $BorderGreyColor !important; 
+    background-color: $WhiteColor;
+}
+
+body .growing{
+    height: 1124px;
+    display: flex;
+    align-items: center;
+    justify-content:start;
+    flex-direction: column;
+
+    .title {
+        @include  Title(Roboro-Regular, 48px);
+    }
+
+    .product-map-selection {
+        width: 970px;
+        height: 518px;
+        margin-top: 56px;
+        background-image: url(/img/main-page-growing/background.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+
+        .grid-vegetables-container {
+            height: fit-content;
+            display: grid;
+            grid-template-columns: repeat(2, auto);
+            font-family: Roboro-Regular;
+            font-size: 16px;
+            border: 2px solid $BorderGreyColor;
+            border-radius: 10px;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px;
+            row-gap: 30px;
+
+            .grid-item {
+                display: flex;
+                align-items: center;
+                gap: 15px;
+
+                .divider-text {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 205px;
+                    height: 60px;
+                    background-color: white;
+                    gap: 5px;
+
+                    .divider {
+                        font-size: 1.75em;
+                        color: $DarkGreenColor;
+                    }
+
+                    p {
+                        margin: 0;
+                    }
+                }
+
+                &.right {
+                    justify-content: right;
+                }
+
+                .hidden {
+                    opacity: 0;
+                    transition: opacity 0.5s ease;
+                }
+                
+                .visible {
+                    opacity: 1;
+                    transition: opacity 0.5s ease;
+                }
+
+                .active-filter {
+                    filter: brightness(0) saturate(100%) invert(32%) sepia(95%) saturate(4909%) hue-rotate(74deg) brightness(96%) contrast(87%);
+                }
+                
+            }
+        }
+    }
+}
+
+.two-column-info {
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 4%;
+    margin-top: 76px;
+    margin-bottom: 150px;
+
+    p {
+        font-size: 16px;
+        word-spacing: 4.5px;
+        margin: 0;
+        width: 49%;
+    } 
+}
+
+@mixin GorizontalLineGreen ($w) {
+    background-color: $lightGreenColor;
+    width: $w;
+    min-height: 1px;    
+}
+
+@mixin PhotoSliderContainer ($br) {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    border-radius: ($br);
+
+    &.active {
+        opacity: 1;
+    }
+}
+
+@mixin HeaderWhiteGorizontalLine ($h, $link) {
+    height: $h;
+    width: 100%;
+    background-image: url(#{$link});
+    font-family: Roboro-Medium;
+    font-size: 48px;
+    color: $WhiteColor;
+    background-size: cover;
+    background-position: center;
+    
+    .black-background {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        background-color: $primaryColor;
+        opacity: 0.6;
+    }
+
+    .text{
+        flex-direction: column;
+        position: absolute;
+        text-align: center;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -250%);
+
+        p {
+            margin: 0;
+        }
+        .white-gorizontal {
+            width: 570px;
+            height: 2px;
+            background-color: $WhiteColor;
+            margin-top: 35px;
+        }
+    }
+}
+
+
+
+
+

@@ -1,0 +1,82 @@
+@import "default";
+
+header {
+    height: 780px;
+
+    .info-block {
+        @include InfoBlock (60.3%, 324px, 52%);
+
+        .title {
+            @include Title(Roboro-Medium, 48px);
+            p{
+                margin-top: 50px;
+            }
+        }     
+
+        .information {
+            font-family: Roboro-Regular;
+        }
+    }    
+}
+
+.grid-img-info{
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    column-gap: 44px;
+    row-gap: 49px;
+    width: 77.6%;
+    margin-bottom: 98px;
+
+    .item {
+        flex-direction: column;
+        width: 100%;
+
+        .photo-container {
+            height: 50%;
+            width: 100%;
+
+            img {
+                width: 100%;
+                height: 100%;
+                display: block;
+            }
+        }
+
+        .text-item {
+            flex-direction: column;
+            height: 50%;
+            position: relative;
+            border-radius: 0 0 10px 10px;
+            padding-top: 40px;
+            padding-bottom: 45px;
+
+            .green-circle {
+                @include Green-circle-template(70px, 70px);
+                position: absolute;
+                top: -8%;
+                left: 8%;
+            }
+
+            .title {
+                @include Title(Roboro-Medium, 28px);
+                p {
+                    margin-bottom: 14px;
+                    margin-top: 0;
+                }
+            }
+
+            .gorizontal-line {
+                @include GorizontalLineGreen (220px);
+            }
+
+            .information {
+                font-size: 20px;
+                font-family: Roboro-light;
+                width: 85%;
+                flex-direction: column;
+                line-height: 1.5;
+                word-spacing: 5px;
+            }
+        }
+    }
+}

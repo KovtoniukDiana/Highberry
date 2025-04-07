@@ -1,0 +1,160 @@
+
+@import "default";
+
+body footer {
+    height: 717px;
+    background-image: url(../img/footer-bgrnd.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .gradient-div {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: $WhiteColor;
+        background-image: url(../img/footer-gradient.png);
+        background-repeat: no-repeat;
+         background-size: cover;
+
+        .content-container {
+            width: 83.6%;
+            margin-top: 90px;
+    
+            .gorizontal-content {
+                display: flex;
+                justify-content: space-between;
+    
+                .form {
+                    display: flex;
+                    flex-direction: column;
+                    font-size: 13px;
+                    width: 380px;
+                    height: 342px;
+                    
+                    .input {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+    
+                        input  {
+                            border: none;
+                            height: 40px;
+                            background: rgba(0, 0, 0, 0.25);
+                            padding-left: 10px;
+    
+                            &:focus {
+                                border: 2px solid $primaryColor;
+                            }
+                        }
+    
+                        input::placeholder {
+                            opacity: 1;
+                            color: $WhiteColor;
+                        }
+    
+                    }
+    
+                    .checkbox label {
+                        display: flex;
+                        gap: 5px;
+                    }
+    
+                    p{
+                        margin-left: 20px;
+                    }
+    
+                    .button-send {
+                        display: flex;
+                        justify-content: center;
+                        margin-top: 30px;
+    
+                        button {
+                            background-color: transparent;
+                            border: 1px solid $WhiteColor;
+                            border-radius: 3px;
+                            color: $WhiteColor;
+                            width: 194px;
+                            height: 42px;
+                        }
+                    }
+                }
+            }
+        }
+    
+        .contacts-container {
+            font-size: 16px;
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+    
+    
+            div a {
+                text-decoration: none;
+                color: $WhiteColor;
+                margin-top: 16px;
+            }
+    
+            .second-row {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+    
+                .address {
+                    width: 26%;
+                }
+    
+                .column-link {
+                    display: flex;
+                    flex-direction: column;
+    
+                    p {
+                        line-height: 2.5;
+                        margin: 0;
+                    }
+                }
+            }
+    
+            .third-row {
+                display: flex;
+                margin-top: 20px;
+                justify-content: right;
+                gap: 25%;
+
+                a {
+                    margin: 0;
+                }
+                
+                .icon-post {
+                    display: flex;
+                    gap: 35px;
+                }
+            }
+        }
+    
+        .footer {
+            background: rgba(0, 0, 0, 0.55);
+            width: 100%;
+            height: 43px;
+            display: flex;
+            justify-content: center;
+            margin-top: auto;
+    
+            .content-footer {
+                width: 83.6%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+    
+                a {
+                    text-decoration: none;
+                    color: $WhiteColor;
+                    font-size: 15px;
+                }
+            }
+    
+        }
+    }
+}
+
