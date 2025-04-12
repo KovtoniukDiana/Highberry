@@ -1,0 +1,147 @@
+
+
+.production-all {
+
+
+    header {
+        height: 1080px;
+
+        nav {
+            @extend %NotFirstHeader;
+        }
+
+        .info-block {
+            @include InfoBlock (64.6%, 574px, 65%);
+
+            .title {
+                @include Title(Roboro-light, 51.4px);
+            }  
+            
+            .icons-info {
+                width: fit-content !important;
+                .facts {
+                    margin-left: 5px;
+                }
+            }
+            
+            .regular-text {
+                text-align: left;
+            }
+        }
+    }
+
+    .frozing {
+        padding-top: 98.51px;
+
+        .frozing-block {
+            width: 72.2%;
+
+            .grey-shadow-box {
+                display: flex;
+                gap: 108px;
+                margin-bottom: 62px;
+
+                div:nth-child(1) {
+                    margin-left: 31px;
+                }
+
+                .text-block {
+                    flex-direction: column;
+                    text-align: left;
+                    width: 61.4%;
+
+                    .title {
+                        @include Title(Roboro-light, 30px);
+                    }
+
+                    .gorizontal-line {
+                        @include GorizontalLineGreen (236px);
+                    }
+
+                    .information {
+                        font-size: 18px;
+                        font-family: Roboro-Regular;
+                    }
+                }
+
+                .image-block {
+                    flex-direction: column;
+                    margin-right: 31px;
+
+                    p {
+                        color: $BlueColor;
+                        font-family: Roboro-Medium;
+                    }
+
+                    .blue-item {
+                        width: 140px;
+                        height: 15px;
+                        background-color: $BlueColor;
+                        border-radius: 15px;
+                        margin-top: 15px;
+                    }
+                }
+            }
+        }
+    }
+
+    .frozing-processes {
+        flex-direction: column;
+
+        .title {
+            @include Title(Roboro-Medium, 51.4px);
+        }
+
+        .fabric-grid {
+            display: grid;
+            width: 91.3%;
+            grid-template-columns: 44.6% 27px 44.6%;
+            grid-template-rows: repeat(10, auto);
+            column-gap: 54.5px;
+            row-gap: 124px;
+
+            .text-item {
+                width: 100%;
+
+                &:nth-child(1) {
+                    margin-top: 45px;
+                }
+            }
+            
+            .green-divider {
+                flex-direction: column;
+                border-left: 5px solid $lightGreenColor;
+                border-right: 5px solid $lightGreenColor;
+                grid-row-start: 1;
+                grid-row-end: 11;
+                grid-column-start: 2;
+                grid-column-end: 3;
+                overflow: hidden;
+
+                img {
+                    width: 13px;
+                }
+            }
+
+            .photo-container {
+                width: 100%;
+                height: 487px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 10px;
+                }
+
+                &:nth-child(3) {
+                    margin-top: 45px;
+                }
+            }
+        }
+    }
+
+    .map-section {
+        height: 870px;
+    }
+
+}

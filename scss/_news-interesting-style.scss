@@ -1,0 +1,78 @@
+
+
+.news-all, .article-all {
+
+    .header-background.news {
+        @include HeaderWhiteGorizontalLine(451px, "/img/events/plant.png");
+    }
+
+    .header-background.article{
+        @include HeaderWhiteGorizontalLine(451px, "/img/useful-interest/article-header.png");
+    }
+
+    .container {
+        flex-direction: column;
+        width: 69.3%;
+        margin: 0 auto;
+        font-family: Roboro-Regular;
+        font-size: 16px;
+
+        p {
+            margin: 0;
+        }
+
+        .number-date {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            color: $lightGreenColor;
+            margin-top: 46px;
+
+            .number {
+                gap: 15px;
+                font-size: 28px;
+            }
+
+            .date {
+                font-size: 20px;
+            }
+        }
+
+        .gorizontal-line {
+            @include GorizontalLineGreen (100%);
+            margin-top: 23px;
+            margin-bottom: 46px;
+        }
+
+        .recipe {
+            line-height: 1.7;
+        }
+
+        .ingridients-wrapper {
+            padding-top: 25px;
+            padding-bottom: 123px;
+            width: 100%;
+
+            .ingridients {
+                width: 47.4%;
+
+                ul {
+                    padding-left: 20px;
+                    line-height: 1.7;
+
+                    li::marker {
+                        font-size: 70%;
+                    }
+                }
+            }
+
+            img {
+                width: 52.6%;
+                border-radius: 10px;
+            }
+        }
+        
+    }
+
+}    
