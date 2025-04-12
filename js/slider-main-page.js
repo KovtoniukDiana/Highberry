@@ -30,47 +30,20 @@ $(document).ready(function() {
     });
 
 //
-
     $(".accordion").click(function() {
-         
-
         let section = $(this).closest(".fresh-production-section"); 
         let imageId = $(this).data("image");
-    
+
         section.find(".image-section img").removeClass("active"); 
         section.find("#" + imageId).addClass("active");
 
-        let content = $(this).find(".accordion-content");
-        let ellipse = $(this).find(".ellipse");
-        let line = $(this).find(".line");
-    
-        $(".accordion").not(this).removeClass("active")
-            .find(".accordion-content").css({"max-height": "0", "opacity": "0"});
-        $(".accordion").not(this).find(".ellipse").css({"background-color": "transparent"});
-        $(".accordion").not(this).find(".line").css({"max-height": "0", "opacity": "0"});
-
-        $(this).toggleClass("active");
-
-        if ($(this).hasClass("active")) {
-             content.css({
-                "max-height": content.prop("scrollHeight") + "px",
-                "opacity": "1"
-            });
-
-            ellipse.css({
-                "background-color": "#74B746"
-            });
-
-            line.css({
-                "max-height": "200px",
-                "opacity": "1"
-             });
-        };     
+        section.find(".accordion").removeClass("active");
+        $(this).addClass("active");
     });
 
+
+
 //
-
-
     $('.slider-text-content .layers-accordion').on('click', function () {
         let index = parseInt($(this).attr('data-index'));
          let images = $('.slider-img-container .slider-img-item');
@@ -89,11 +62,6 @@ $(document).ready(function() {
             }
         });
     });
-
-
-
-
-
 
 
     
