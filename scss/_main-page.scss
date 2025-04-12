@@ -6,16 +6,6 @@
         border-radius: 10px;
     }
 
-    .image-section {
-        width: 700px;
-        position: relative;
-
-        img {
-            @include PhotoSliderContainer (0px);
-
-        }
-    }
-
     .slider-text-content {
         display: flex;
         flex-direction: column;
@@ -86,7 +76,7 @@
                 }
             }
             
-            &.active .ellipse .accordion-content{
+            &.active {
                 .ellipse {
                     background-color: $AccordeonColor;
                 }
@@ -98,9 +88,10 @@
 
                 .accordion-content {
                     opacity: 1;
+                    max-height: 106px;
+
                 }
             }
-
         }
         
 
@@ -192,11 +183,13 @@
         .image-section {
             width: 48.9%;
             height: 100%;
+            position: relative;
 
             img {
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
+                @include PhotoSliderContainer (0px);
             }
         }
 
@@ -214,7 +207,7 @@
         @include MainPageSliderContainer(99px, 619px); 
 
         .slider-img-container{
-            width: 48%;
+            width: 48% !important;
             display: flex;
             align-items: center;
             position: relative;
@@ -272,12 +265,15 @@
 
         .title {
             @include Title( Roboro-Regular, 48px);
+            text-align: center;
         }
 
         .production-content{
             width: 67.9%;
             height: 30.4%;
             gap: 65px;
+            padding: 20px;
+            box-sizing: border-box;
 
             .img-container {
                 display: flex;
@@ -309,8 +305,6 @@
             margin-bottom: 63px;
         }
     }
-
-
 
 
     .youtube-video-section {

@@ -1,0 +1,213 @@
+
+
+.index-all {
+
+    
+
+    @media screen and (max-width: 1024px) {
+
+        .icon-container {
+            width: 730px;
+
+            .icons-info {
+                @include GreenIconContainer(29.74%, 87.85px);
+        
+                .green-circle {
+                    @include Green-circle-template(40px, 40px);
+                }
+        
+                .facts p{
+                        font-size: 13px;
+                }
+            }
+        }
+        
+        header {
+
+            .showreel .watch {
+                display: none;
+            }
+
+            .inner-section-second {
+                justify-content: center !important;
+    
+                .icons {
+                    display: none;
+                }
+            }
+        }
+
+        .we-near {
+
+            .icon-container {
+                width: 713px;
+            }
+
+            .two-column-info {
+                margin-top: 61px;
+                margin-bottom: 15px;
+            }
+        }
+
+
+        .fresh-production-section {
+            gap: 21px;
+            
+            .image-section {
+                width: 57.1%;
+            }
+
+            &.first {
+                height: 557px;
+            }
+            &.second {
+                height: 576px;
+            }
+        }
+
+        .slider-text-content {
+            row-gap: 5px;
+
+            .title {
+                font-size: 32px;
+            }
+
+            .accordion {
+                gap: 20px;
+
+                .accordion-text {
+    
+                    .title-text {
+                        font-size: 20px;
+                    }
+                    .accordion-content {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        p {
+                            font-size: 12px;
+                        }
+                    }
+
+                    .green-link {
+                        font-size: 12px;
+                    }
+                }
+
+                .accordion-icon {
+                    .ellipse {
+                        height: 10px;
+                        width: 50%;
+                    }
+                    .line {
+                        margin-top: 9px;
+                    }
+                }
+
+                &.active {
+                    .ellipse {
+                        background-color: $AccordeonColor;
+                    }
+    
+                    .line {
+                        max-height: 126px;
+                        opacity: 1;
+                    }
+    
+                    .accordion-content {
+                        opacity: 1;
+                        max-height: 73px;
+    
+                    }
+                }    
+            }
+        }
+
+        .growing {
+            height: fit-content;
+
+            .icon-container {
+                
+                .icons-info {
+                    width: 217px;
+                }
+            }
+
+            .product-map-selection {
+                width: 730px;
+                height: 386px;
+                margin-top: 42px;
+                background-image: url(../img/adaptive/growing-background.png);
+                background-repeat: no-repeat;
+                background-position: center center;
+
+                .grid-vegetables-container {
+                    font-size: 14px;
+                    padding: 10px 46px;
+                    row-gap: 10px;
+                }
+            }
+
+            .two-column-info {
+                margin-top: 30px;
+                margin-bottom: 66px;
+                p {
+                    line-height: 1.56;
+                }
+            }
+        }
+
+        .frozen {
+
+            height: 500px;
+            justify-content: space-between;
+
+            .slider-img-container {
+                width: 56.6%;
+            }
+            .slider-text-content {
+                width: 33.4%;
+                .title {
+                    margin-top: 20%;
+                }
+            }
+
+        }
+
+        .production {
+            height: fit-content;
+
+            .round-border-container {
+                height: fit-content;
+            }
+
+            .icon-container{
+                margin-top: 46px;
+                margin-bottom: 0;
+            }
+        }
+        
+        
+        .youtube-video-section {
+            height: 421px;
+    
+            .video {
+                width: 70%;
+                height: 80%;
+    
+                iframe {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+
+        
+        
+
+    
+
+
+
+    }
+}
