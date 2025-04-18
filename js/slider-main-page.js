@@ -31,7 +31,7 @@ $(document).ready(function() {
 
 //
     $(".accordion").click(function() {
-        let section = $(this).closest(".fresh-production-section"); 
+        let section = $(this).closest(".fresh-production-section, .frozen"); 
         let imageId = $(this).data("image");
 
         section.find(".image-section img").removeClass("active"); 
