@@ -2,56 +2,82 @@
 .growing-all, .production-all, .about-us-all, .news-all, .contacts-all, .mission-all, .vacancy-all, .events-all, .product-all, .useful-interesting-all, .article-all, .privacy-all {
     
 
-header {
+    header {
+        position: relative;
 
-    nav {
-     @extend %NotFirstHeader;
-    }
-     
-     .header-background {
-         padding-top: 80px;
+
+        nav {
+        @extend %NotFirstHeader;
+        }
         
-         img {
-             position: relative;
-             width: 100%;
-         }
-     }
- 
-     .info-block {
-         .title {
-             p {
-                 margin-bottom: 15px;
-                 margin-top: 84px;
-                 font-weight: bold;
-             }
-         }
- 
-         .gorizontal-line {
-            @include GorizontalLineGreen (65.6%);
-         }
- 
-         .information {
-             font-size: 20px;
-             line-height: 1.5;
-             width: 80%;
-             p {
-                 margin-top: 30px;
-                 margin-bottom: 80px;
-             }
-         }
-     
-         .icon-container {
-             width: 80%;
- 
-             .icons-info {
-                 @include GreenIconContainer(33.3%, 56px);
-                 border: none;
-                 p {
-                     font-size: 18px;
-                 }
-             }
-         }
-     }
- }
- 
+        .header-background {
+            padding-top: 80px;
+            overflow: hidden;
+
+            img {
+                min-width: 100%;
+                object-fit: cover;
+            }
+        }
+    
+        .info-block {
+            @include InfoBlock (auto, auto, 400px !important);
+            
+            .title {
+                p {
+                    margin-bottom: 15px;
+                    margin-top: 84px;
+                    font-weight: bold;
+                }
+            }
+    
+            .gorizontal-line {
+                @include GorizontalLineGreen (65.6%);
+            }
+    
+            .information {
+                font-size: 20px;
+                line-height: 1.5;
+                width: 80%;
+                p {
+                    margin-top: 30px;
+                    margin-bottom: 80px;
+                }
+            }
+        
+            .icon-container {
+                width: 80%;
+    
+                .icons-info {
+                    @include GreenIconContainer(33.3%, 56px);
+                    border: none;
+                    p {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 1024px) {
+    .growing-all, .production-all, .about-us-all, .news-all, .contacts-all, .mission-all, .vacancy-all, .events-all, .product-all, .useful-interesting-all, .article-all, .privacy-all {
+
+
+        header .info-block {
+            top: 220px !important;
+        }
+    }
+}
+
+@media screen and (max-width: 631px) {
+    .growing-all, .production-all, .about-us-all, .news-all, .contacts-all, .mission-all, .vacancy-all, .events-all, .product-all, .useful-interesting-all, .article-all, .privacy-all {
+
+
+        header .info-block {
+            top: 292px !important;
+        }
+    }
 }

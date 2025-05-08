@@ -121,7 +121,7 @@ iconItems.click(function() {
     let imageId = $(this).attr("data-img");
 
     photoItems.each(function() {
-        if ($(this).attr('data-img') === imageId) {
+        if ($(this).attr('data-img') == imageId) {
             photoItems.removeClass('active');
             $(this).addClass("active");
         }

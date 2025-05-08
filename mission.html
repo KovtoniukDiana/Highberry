@@ -24,9 +24,72 @@
                         <div class="languages">
                             <p>UA &#124; EN &#124; PL &#124;</p>
                         </div>
-                    </div>    
+                    </div> 
+                    
+                    <img class="menu-img green-fiter" src="img/menu.png" alt="">
                 </div>
             </nav>
+            <div class="opened-menu">
+                <div class="menu ">
+                    <div class="controls">
+                        <div class="languages">
+                            <p>UA &#124; EN &#124; PL &#124;</p>
+                        </div>
+        
+                        <div class="buttons flex-wrapper">
+                            <a class="flex-wrapper" href="index.html">
+                                <img class="home" src="img/home.png" alt=""> 
+                            </a> 
+                            <img class="close-menu" src="img/close-menu.png" alt="">          
+                        </div>     
+                    </div>
+        
+                    <ul class="ul-item">
+                        <li class="li-item">
+                            <a href="about-us.html">КОМПАНІЯ <img class="can-open" src="img/menu-arrow.png" alt=""></a>
+                            <ul class="submenu">
+                                <li><a href="mission.html">Місія та цінності</a></li>
+                                <li><a href="about-us.html">Про нас</a></li>
+                                <li><a href="vacancy.html">Вакансіі</a></li>
+                            </ul>
+                        </li>
+                        <li class="li-item">
+                            <a href="growing.html">ВИРОЩУВАННЯ</a>
+                        </li>
+                        <li class="li-item">
+                            <a href="production.html">ВИРОБНИЦТВО</a>
+                        </li>
+                        <li class="li-item">
+                            <a href="product.html">ПРОДУКЦІЯ</a>
+                        </li>
+                        <li class="li-item"> 
+                            <a href="news.html">НОВИНИ <img class="can-open" src="img/menu-arrow.png" alt=""></a>
+                            <ul class="submenu">
+                                <li><a href="events.html">Події</a></li>
+                                <li><a href="useful-interessting.html">Корисно та цікаво</a></li>
+                            </ul>
+                        </li>
+                        <li class="li-item">
+                            <a href="contacts.html">КОНТАКТИ</a>
+                        </li>
+                    </ul>
+        
+                    <div class="gorizontal-line"></div>
+        
+                    <div class="contacts">
+                        <div class="number">
+                            <p>+380 67 560 3808</p>
+                            <p>+380 96 400 5555</p>
+                            <p>high.berry@ukr.net</p>
+                        </div>
+        
+                        <div class="region">
+                            <p>для України</p>
+                            <p>для інших країн</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
     
             <div class="header-background"> 
                 <img src="img/mission/header.png" alt="">
@@ -129,14 +192,11 @@
             </div>
         </div>
     
-    
-    
-    
         <footer>
             <div class="gradient-div">
                 <div class="content-container">
                     <div class="gorizontal-content">
-                        <div>
+                        <div class="logo-wrapper">
                             <img class="company-logo-second" src="img/company-logo.png" alt="company-logo">
                         </div>
         
@@ -152,8 +212,8 @@
         
                             <div class="checkbox">
                                 <label>
-                                  <input type="checkbox">
-                                   Даю згоду на обробку, зберігання та використання особистих даних
+                                <input type="checkbox">
+                                Даю згоду на обробку, зберігання та використання особистих даних
                                 </label>
                             </div> 
         
@@ -165,10 +225,14 @@
                     </div>
         
                     <div class="contacts-container">
-                        <p>ТОВ "ХАЙБЕРРІ"</p>
+                        <div class="first-row">
+                            <p class="company-name">ТОВ "ХАЙБЕРРІ"
+                                <p class="address tablet">с.Старий Чорторийськ, вул.Сокола, 101-АВолинська область, Маневецький районУкраїна, 44636</p>
+                            </p>
+                        </div>
                         
                         <div class="second-row">
-                            <p class="address">с.Старий Чорторийськ, вул.Сокола, 101-АВолинська область, Маневецький районУкраїна, 44636</p>
+                            <p class="address laptop">с.Старий Чорторийськ, вул.Сокола, 101-АВолинська область, Маневецький районУкраїна, 44636</p>
                             <div class="column-link">
                                 <a href="">КОМПАНІЯ</a>
                                 <a href="">ВИРОЩУВАННЯ</a>
@@ -181,7 +245,7 @@
                                 <a href="">НОВИНИ</a>
                                 <a href="">КОНТАКТИ</a>  
                             </div>
-                            <div class="column-link">
+                            <div class="column-link numbers">
                                 <a href="tel:+380 67 560 3808">+380 67 560 3808</a>
                                 <a href="tel:+380 96 400 5555">+380 96 400 5555</a>
                             </div>
@@ -224,5 +288,8 @@
         </footer>
     </div>
 
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/menu.js"></script>
 </body>
 </html>

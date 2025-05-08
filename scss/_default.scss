@@ -41,6 +41,7 @@ $lightGreenColor: #6AB354;
 $DarkGreenColor: #20912A;
 $AccordeonColor: #74B746;
 $LinkColor: #74B746;
+$DeepGreenColor: #3A7611;
 $AlmostWhiteColor: #F5F5F5;
 $WhiteColor: #FFFFFF;
 $BorderGreyColor: #E3DED9;
@@ -108,7 +109,7 @@ body {
 
         .pdf-image {
             width: 18.74px;
-            height: 16.06px;
+            height: 21px;
         }
     }
 
@@ -178,7 +179,6 @@ body {
 .scroll-down {
     background-color: $WhiteColor !important;
     color: $lightGreenColor;
-    z-index: 7;
     opacity: 1;
     transition: background-color 0.5s ease-out, color 0.5s ease-out;
 
@@ -195,7 +195,7 @@ body .grey-background {
     background-color: $WhiteColor;
     color: $lightGreenColor;
     position: fixed;
-    z-index: 1;
+    z-index: 7;
 
     .green-fiter {
         filter: brightness(0) saturate(100%) invert(64%) sepia(14%) saturate(1413%) hue-rotate(61deg) brightness(94%) contrast(92%);
@@ -207,6 +207,10 @@ body .grey-background {
     flex-direction: column;
     align-items: center;
     text-align: center;
+
+    .icon-container .icons-info{
+        text-align: left;
+    }
 }
 
 @mixin InfoBlock ($w, $h, $top) {
@@ -215,7 +219,7 @@ body .grey-background {
     position: absolute;
     top: $top;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, 0%);
     overflow: hidden;
 }
 
@@ -233,8 +237,12 @@ body .grey-background {
     .green-circle {
         @include Green-circle-template (70px, 70px);    
         position: absolute; 
-        top: -8%;
+        top: -8%;   
     }
+}
+.round-border-container {
+    border: 2px solid $BorderGreyColor;
+    border-radius: 10px;
 }
 
 .grey-shadow-box {
@@ -389,20 +397,18 @@ body .growing{
         text-align: center;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -250%);
+        transform: translate(-50%, 0);
 
         p {
             margin: 0;
         }
         .white-gorizontal {
             width: 570px;
-            height: 2px;
+            height: 1px;
             background-color: $WhiteColor;
-            margin-top: 35px;
+            margin-top: 29px;
         }
     }
 }
-
-
 
 

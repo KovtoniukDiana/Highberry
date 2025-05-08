@@ -10,6 +10,10 @@
             @extend %NotFirstHeader;
         }
 
+        .opened-menu .menu .controls .buttons.flex-wrapper{
+            flex-direction: row;
+        }
+
         .info-block {
             @include InfoBlock (60.3%, 324px, 52%);
 
@@ -87,6 +91,7 @@
                     @include Title(Roboro-Regular, 28px);
                     p{
                         margin-top: 0;
+                        text-align: center;
                     }
 
                 }
@@ -138,6 +143,7 @@
             @include Title(Roboro-Regular, 20px);
         p {
             margin-top: 55px;
+            text-align: center;
         }
         }
 

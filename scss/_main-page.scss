@@ -1,10 +1,5 @@
 
 .index-all {
-            
-    .round-border-container {
-        border: 2px solid $BorderGreyColor;
-        border-radius: 10px;
-    }
 
     .slider-text-content {
         display: flex;
@@ -112,10 +107,17 @@
         height: 910px;
         color: $WhiteColor;
 
+        .video-bg {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
         .col-xxl-container {
             width: 77%;
             height: fit-content;
-            
+            position: absolute;
 
             .img-slogan {
                 display: flex;
@@ -137,16 +139,15 @@
                     }
 
                 }
-
-            }
-            
+            }  
         }
 
         .showreel{
             align-self: flex-end;
-            margin-top: 98px;
+            margin-top: 813px;
             margin-right: 40px;
             display: flex;
+            position: absolute;
 
             button {
                 background-color: transparent;
@@ -154,9 +155,7 @@
                 padding: 0;
                 cursor: pointer;
             }
-
-    }
-
+        }
     }
 
     .we-near {
