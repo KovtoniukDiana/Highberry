@@ -4,7 +4,7 @@
 
 
     .header-background {
-        @include HeaderWhiteGorizontalLine(447px, "/img/contacts/header.png");
+        @include HeaderWhiteGorizontalLine(447px, "../img/contacts/header.png");
     }
 
     .section {

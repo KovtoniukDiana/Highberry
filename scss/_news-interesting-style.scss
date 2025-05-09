@@ -3,11 +3,11 @@
 .news-all, .article-all {
 
     .header-background.news {
-        @include HeaderWhiteGorizontalLine(451px, "/img/events/plant.png");
+        @include HeaderWhiteGorizontalLine(451px, "../img/events/plant.png");
     }
 
     .header-background.article{
-        @include HeaderWhiteGorizontalLine(451px, "/img/useful-interest/article-header.png");
+        @include HeaderWhiteGorizontalLine(451px, "../img/useful-interest/article-header.png");
     }
 
     .container {

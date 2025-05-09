@@ -2,7 +2,7 @@
 .product-all {
 
     .header-background {
-        @include HeaderWhiteGorizontalLine(451px, "/img/production/production-header.png");
+        @include HeaderWhiteGorizontalLine(451px, "../img/production/production-header.png");
     }
 
     .content-wrapper {
@@ -52,6 +52,7 @@
                 top: -20px;
                 border: 1px solid $lightGreenColor;
                 background-color: $WhiteColor;
+                box-shadow: 0 10px 5px rgba(0, 0, 0, 0.1);
                 width: 456px;
                 padding: 50px 59px;
                 box-sizing: border-box;
@@ -198,10 +199,11 @@
 .product-item-all {
 
     .header-background {
-        background-image: url('/img/product/background-raspberry.png') !important;
+        background-image: url('../img/product/background-raspberry.png') !important;
     }
 
     .content-wrapper {
+        padding-bottom: 37px;
         
         .item-card {
             justify-content: left;
@@ -227,7 +229,15 @@
 
                 .big-image {
                     grid-column-start: 1;
-                    grid-column-end: 4; position: relative;
+                    grid-column-end: 4; 
+                    position: relative;
+                    height: 490px;
+                    
+
+                    .slider-wrapper {
+                        height: 100%;
+                        display: flex;
+                    }
 
                     .shadow {
                         justify-content: space-between;
@@ -235,7 +245,7 @@
                         height: 76px;
                         background-color: rgba(0, 0, 0, 0.5);
                         position: absolute;
-                        top: 421px;
+                        top: 414px;
                         border-bottom-left-radius: 10px;
                         border-bottom-right-radius: 10px;
                         color: $WhiteColor;
@@ -247,6 +257,22 @@
 
                 .mini-image {
                     height: 144px;
+                    position: relative;
+
+                    .white-shadow {
+                        width: 100%;
+                        height: 100%;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        z-index: 1;
+                        transition: background-color 0.5s ease;
+                        
+                        &.active {
+                            background-color: $AlmostWhiteColor;
+                            opacity: 0.65;
+                        }
+                    }
                 }
             }
 
@@ -301,6 +327,7 @@
             @include GreenBorderBox (auto, fit-content);
             padding: 38px 39px  72px 39px;
             flex-direction: column;
+            box-shadow: 0 10px 5px rgba(0, 0, 0, 0.1);
 
             .title p {
                 @include Title(Roboro-light, 28px);
@@ -309,22 +336,14 @@
                 margin-bottom: 47px;
             }
 
-            .slider {
+            .gallery {
                 width: 78.4%;
 
-                .controls {
-                    position: absolute;
-                    top: 45%;
+                .gallery-wrapper {
                     width: 100%;
                     justify-content: space-between;
-                    padding: 0 39px;
-                    box-sizing: border-box;
-                    opacity: 0.65;
-                }
-
-                .slider-wrapper {
-                    width: 100%;
-                    justify-content: space-between;
+                    align-items: flex-start;
+                    gap: 30px;
 
                     .item {
                         flex-direction: column;
