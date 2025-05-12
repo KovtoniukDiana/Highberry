@@ -89,9 +89,30 @@ $(document).ready(function() {
 
     })
 
+
+
+
     
+//showreel
+
+    let showreel = $('.showreel button');
+    let videoShowreel = $('.video-showreel');
+
+
+    showreel.click(function() {
+        videoShowreel.addClass('active');
+    });
+
+    videoShowreel.click(function(e) {
+
+        if (!$(e.target).is('iframe')) {
+            $(this).removeClass('active');
+        }
+
+    });
 
 });
+
 
 
 

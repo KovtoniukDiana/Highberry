@@ -749,18 +749,48 @@ body footer .gradient-div .footer .content-footer a {
 .index-all header .col-xxl-container .img-slogan .slogan p {
   margin: 0;
 }
+.index-all header .video-showreel {
+  position: fixed;
+  z-index: 20;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  visibility: hidden;
+  transition: background 0.4s ease;
+}
+.index-all header .video-showreel iframe {
+  width: 50%;
+  height: 400px;
+}
+.index-all header .video-showreel.active {
+  visibility: visible;
+}
 .index-all header .showreel {
   align-self: flex-end;
   margin-top: 813px;
   margin-right: 40px;
-  display: flex;
   position: absolute;
+  gap: 47px;
 }
 .index-all header .showreel button {
   background-color: transparent;
-  border: none;
-  padding: 0;
   cursor: pointer;
+}
+.index-all header .showreel .anchor-down-arrow {
+  border: none;
+}
+.index-all header .showreel .watch {
+  background-color: transparent;
+  border: 1px solid #FFFFFF;
+  padding: 10px 30px;
+  color: #FFFFFF;
+  border-radius: 10px;
+  font-size: 22px;
+  font-family: Roboro-light;
+  gap: 30px;
 }
 .index-all .we-near {
   flex-direction: column;
@@ -1599,7 +1629,6 @@ body footer .gradient-div .footer .content-footer a {
   justify-content: center;
   align-items: center;
   width: 70px;
-  z-index: 2;
   transition: background-color 0.2s ease;
 }
 .product-all .content-wrapper .menu .green-circle .regular-icon {
@@ -1631,9 +1660,10 @@ body footer .gradient-div .footer .content-footer a {
   width: 456px;
   padding: 50px 59px;
   box-sizing: border-box;
-  z-index: -1;
+  visibility: hidden;
   opacity: 0;
-  transition: opacity 0.6s ease, top 0.6s ease, z-index 0.4s ease;
+  transition: opacity 0.6s ease, top 0.6s ease, visibility 0.6s ease;
+  z-index: 1;
 }
 .product-all .content-wrapper .menu .submenu ul {
   list-style: none;
@@ -1657,7 +1687,7 @@ body footer .gradient-div .footer .content-footer a {
 .product-all .content-wrapper .menu .submenu.active {
   opacity: 1;
   top: 130px;
-  z-index: 1;
+  visibility: visible;
 }
 .product-all .content-wrapper .wrapper {
   flex-direction: column;
@@ -3941,6 +3971,9 @@ body footer .gradient-div .footer .content-footer a {
   }
 }
 @media screen and (max-width: 631px) {
+  .facts .inline-group .bold-text {
+    text-shadow: 0.2px 0.2px 0 black;
+  }
   nav {
     height: 52px;
   }

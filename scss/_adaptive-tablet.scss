@@ -1833,6 +1833,11 @@
 
     @media screen and (max-width: 631px) {
 
+        .facts .inline-group .bold-text {
+
+            text-shadow: 0.2px 0.2px 0 black;
+        }
+
         nav {
             height: 52px;
                 .navigation-wrapper {
