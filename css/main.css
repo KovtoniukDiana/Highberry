@@ -135,7 +135,7 @@ body .grey-background {
 }
 
 .growing-all header nav, .production-all header nav, .about-us-all header nav, .news-all header nav, .contacts-all header nav, .mission-all header nav, .vacancy-all header nav, .events-all header nav, .product-all header nav, .useful-interesting-all header nav, .article-all header nav, .privacy-all header nav {
-  background-color: #FFFFFF;
+  background-color: #FFFFFF !important;
   color: #6AB354;
   position: fixed;
   z-index: 7;
@@ -3895,6 +3895,22 @@ body footer .gradient-div .footer .content-footer a {
   .growing-all .gorizontal-slider.first-slider .wrapper-under-animation .text-block .icon-text-group .icons-info .facts .regular-text {
     word-break: keep-all;
   }
+  .growing-all .video-showreel iframe {
+    width: 87%;
+    height: 400px;
+  }
+  .growing-all .showreel button {
+    padding: 11px 54px;
+    width: 56% !important;
+    height: 61px !important;
+  }
+  .growing-all .showreel button img {
+    height: 40px;
+    width: 40px;
+  }
+  .growing-all .showreel button span {
+    font-size: 21px !important;
+  }
   .production-all .info-block {
     width: 80% !important;
   }
@@ -4836,6 +4852,25 @@ body footer .gradient-div .footer .content-footer a {
     font-size: 11px !important;
   }
   .growing-all .gorizontal-slider.first-slider .text-block .icon-text-group .icons-info .facts .regular-text {
+    font-size: 10px !important;
+  }
+  .growing-all .video-showreel iframe {
+    width: 87%;
+    height: 200px;
+  }
+  .growing-all .showreel {
+    padding: 36px 0 !important;
+  }
+  .growing-all .showreel button {
+    padding: 8px 25px !important;
+    width: 48% !important;
+    height: 30px !important;
+  }
+  .growing-all .showreel button img {
+    height: 19px !important;
+    width: 19px !important;
+  }
+  .growing-all .showreel button span {
     font-size: 10px !important;
   }
   .production-all .frozing-processes .fabric-image img {

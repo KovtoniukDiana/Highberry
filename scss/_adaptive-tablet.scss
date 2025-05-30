@@ -1702,6 +1702,28 @@
                     }
                 }
             }
+
+            .video-showreel {
+                iframe {
+                    width: 87%;
+                    height: 400px;
+                }
+            }
+
+             .showreel button  {
+                padding: 11px 54px;
+                width: 56% !important;
+                height: 61px !important;
+
+                img {
+                    height: 40px;
+                    width: 40px;
+                }
+
+                span {
+                    font-size: 21px !important;
+                }
+             }
         }
 
         .production-all {
@@ -3042,8 +3064,33 @@
                     }
                 }
             }
+
+            .video-showreel {
+                iframe {
+                    width: 87%;
+                    height: 200px;
+                }
+            }
             
-            
+            .showreel {
+                padding: 36px 0 !important;
+
+                button  {
+                padding: 8px 25px !important;
+                width: 48% !important;
+                height: 30px !important;
+
+                img {
+                    height: 19px !important;
+                    width: 19px !important;
+                }
+
+                span {
+                    font-size: 10px !important;
+                }
+
+             }
+            }
         }
 
         .production-all {

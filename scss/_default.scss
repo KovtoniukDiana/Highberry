@@ -196,7 +196,7 @@ body .grey-background {
 }    
 
 %NotFirstHeader {
-    background-color: $WhiteColor;
+    background-color: $WhiteColor !important;
     color: $lightGreenColor;
     position: fixed;
     z-index: 7;
