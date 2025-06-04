@@ -95,7 +95,7 @@ $(document).ready(function() {
     
 //showreel
 
-    let showreel = $('.showreel button');
+    let showreel = $('.showreel .watch');
     let videoShowreel = $('.video-showreel');
 
 
